@@ -1,0 +1,16 @@
+@media (max-width: 768px) {
+  .section {
+    padding-block: var(--section-spacing-tablet);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding-block: var(--section-spacing-mobile);
+  }
+
+  .foundation-card {
+    padding: 2rem 1.25rem;
+    border-radius: var(--radius-medium);
+  }
+}

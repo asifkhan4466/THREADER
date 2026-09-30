@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  color: inherit;
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-spacing-desktop);
+}
+
+.navigation-preview {
+  display: grid;
+  min-height: 145vh;
+  place-items: center;
+  background: var(--color-background);
+}
+
+.navigation-preview__content {
+  text-align: center;
+}
+
+.navigation-preview .type-display {
+  color: var(--color-accent);
+}
+
+.navigation-preview .type-subheading {
+  margin-top: 1rem;
+  color: var(--color-primary);
+}
+
+.foundation-screen {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem 1rem;
+}
+
+.foundation-card {
+  width: min(100%, 46rem);
+  padding: clamp(2rem, 6vw, 4.5rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-large);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-small);
+  text-align: center;
+}
+
+.foundation-logo {
+  width: min(100%, 20rem);
+  height: auto;
+  margin: 0 auto 2rem;
+}
+
+.foundation-tagline {
+  margin: 0.5rem 0 0;
+  color: var(--color-accent);
+}
+
+.foundation-message {
+  margin: 1.25rem 0 0;
+}
+
+.foundation-status {
+  display: grid;
+  gap: 0.75rem;
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding: 0;
+  color: var(--color-muted);
+  text-align: left;
+  list-style: none;
+}
+
+.foundation-status li::before {
+  margin-right: 0.75rem;
+  color: var(--color-accent);
+  content: "✓";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

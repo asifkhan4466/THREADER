@@ -1,0 +1,11 @@
+.contact-dock{scroll-margin-top:76px;overflow:hidden;background:var(--color-background)}.contact-dock__intro{max-width:720px;margin-inline:auto;text-align:center}.contact-dock__intro .type-label{margin-bottom:.75rem}.contact-dock__description{margin:1rem auto 0}.contact-dock__panel{position:relative;max-width:920px;margin:3.5rem auto 0;padding:clamp(4rem,7vw,5.25rem) clamp(1rem,4vw,3rem) clamp(2.25rem,5vw,3.5rem);overflow:visible;border:1px solid var(--color-border);border-radius:var(--radius-large);background:rgba(255,255,255,.52);box-shadow:var(--shadow-small)}.contact-dock__panel::before,.contact-dock__panel::after{position:absolute;width:4rem;height:4rem;border-color:var(--color-secondary);content:"";opacity:.7;pointer-events:none}.contact-dock__panel::before{top:1rem;left:1rem;border-top:1px solid;border-left:1px solid}.contact-dock__panel::after{right:1rem;bottom:1rem;border-right:1px solid;border-bottom:1px solid}.contact-dock__line{position:absolute;left:50%;width:min(36%,15rem);height:1px;background:linear-gradient(90deg,transparent,var(--color-accent),transparent);transform:translateX(-50%)}.contact-dock__line--top{top:1.5rem}.contact-dock__line--bottom{bottom:1.5rem}.contact-dock__instruction{margin:0 0 2.3rem;color:var(--color-muted);font-size:.76rem;text-align:center}.contact-dock__list{display:flex;align-items:flex-end;justify-content:center;gap:clamp(.45rem,1.35vw,1rem);min-width:0;margin:0;padding:1.5rem 0 0}.contact-dock__list:focus-within{position:relative;z-index:2}
+@media(max-width:700px){.contact-dock__panel{margin-top:2.75rem;padding-right:.75rem;padding-left:.75rem}.contact-dock__list{gap:clamp(.25rem,1vw,.5rem)}.contact-dock__instruction{padding-inline:1.25rem}}
+@media(max-width:360px){.contact-dock__panel{padding-right:.45rem;padding-left:.45rem}.contact-dock__list{gap:.2rem}}
+@media(prefers-reduced-motion:reduce){.contact-dock__panel,.contact-dock__list{scroll-behavior:auto}}
+
+/* Keep all seven contact cards inside narrow mobile panels. */
+@media(max-width:520px){
+  .contact-dock__list{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:end}
+  .contact-dock-card__item{min-width:0}
+  .contact-dock-card{width:100%;height:auto;aspect-ratio:1}
+}

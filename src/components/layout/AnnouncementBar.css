@@ -1,0 +1,14 @@
+.announcement{
+    overflow:hidden;background:var(--color-primary);color:var(--color-background)}
+.announcement__inner{
+    position:relative;display:grid;min-height:38px;padding:.4rem 3.75rem;place-items:center}
+.announcement p{
+    display:flex;align-items:center;gap:.65rem;margin:0;text-align:center;font-size:.75rem;font-weight:500;letter-spacing:.04em;line-height:1.4}
+.announcement p svg{
+    width:15px;height:15px;flex:none;color:var(--color-accent)}
+.announcement button{
+    position:absolute;right:max(1rem,calc((100% - var(--container-width))/2));display:grid;width:44px;height:38px;padding:0;border:0;background:transparent;color:inherit;place-items:center;transition:color var(--transition-fast)}
+.announcement button:hover{
+    color:var(--color-accent)}.announcement button svg{width:17px}
+@media(max-width:480px)
+{.announcement__inner{min-height:44px;padding:.45rem 3.25rem .45rem .75rem}.announcement p{font-size:.7rem}.announcement p svg{display:none}.announcement button{right:.2rem;height:44px}}
